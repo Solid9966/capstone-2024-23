@@ -24,24 +24,33 @@ public class GeoCoding {
     }
 
     @GetMapping("/find-way")
-    public TmapPedestrianResponseDto checkPede(@RequestParam("startLat") String startLat
+    public Properties checkPede(@RequestParam("startLat") String startLat
                            , @RequestParam("startLon") String startLon
             , @RequestParam(value = "endAddress") String endAddress) throws Exception {
         System.out.println("startLat = " + startLat);
         System.out.println("startLon = " + startLon);
         System.out.println("endAddress = " + endAddress);
-        return pedestrianService.requestPedestrian(startLat,startLon,endAddress);
+        Properties properties = new Properties();
+        TmapPedestrianResponseDto tmapPedestrianResponseDto = pedestrianService.requestPedestrian(startLat, startLon, endAddress);
+        properties.setTotalDistance(tmapPedestrianResponseDto.getFeatures().getFirst().getProperties().getTotalDistance());
+        properties.setTotalTime(tmapPedestrianResponseDto.getFeatures().getFirst().getProperties().getTotalTime());
+        return properties;
     }
 
     @GetMapping("/start-navi")
-    public TmapPedestrianResponseDto confirmPede(@RequestParam("startLat") String startLat
+    public Properties confirmPede(@RequestParam("startLat") String startLat
             , @RequestParam("startLon") String startLon
             , @RequestParam("endAddress") String endAddress
             ,@RequestParam("uuid") String uuid) throws Exception {
         System.out.println("startLat = " + startLat);
         System.out.println("startLon = " + startLon);
         System.out.println("endAddress = " + endAddress);
-        return pedestrianService.requestPedestrian(startLat,startLon,endAddress);
+        System.out.println("uuid = " + uuid);
+        TmapPedestrianResponseDto tmapPedestrianResponseDto = pedestrianService.startPedestrianNavi(startLat, startLon, endAddress, uuid);
+        Properties properties = new Properties();
+        properties.setPointIndex(1);
+        properties.setDescription("경로 안내를 시작 합니다."+tmapPedestrianResponseDto.getFeatures().getFirst().getProperties().getDescription());
+        return properties;
     }
 
     @GetMapping("/poi")
@@ -52,18 +61,44 @@ public class GeoCoding {
     }
 
     @GetMapping("/current-location")
-    public Poi currentLocation(@RequestParam("curLat") String curLat,
+    public DistanceInfo currentLocation(@RequestParam("curLat") String curLat,
                        @RequestParam("curLon") String curLon,
                        @RequestParam("uuid") String uuid,
-                       @RequestParam("nodeIndex") int nodeIndex){
+                       @RequestParam("pointIndex") int pointIndex,
+                                        @RequestParam("cnt") int cnt,@RequestParam("distance") int distance){
+        System.out.println("-----------------current--------------");
+        System.out.println("curLat = " + curLat);
+        System.out.println("curLon = " + curLon);
+        System.out.println("uuid = " + uuid);
+        System.out.println("pointIndex = " + pointIndex);
+        System.out.println("cnt = " + cnt);
 
-        return null;
+
+        return pedestrianService.currentLocationCheck(curLat, curLon, uuid, pointIndex,cnt,distance);
     }
 
+    @GetMapping("/direction")
+    public DirectionInfo direction(@RequestParam("curLat") String curLat,
+                                        @RequestParam("curLon") String curLon,
+                                        @RequestParam("uuid") String uuid,
+                                        @RequestParam("pointIndex") int pointIndex,
+                                        @RequestParam("curDir") String curDir){
+        System.out.println("-----------------direction--------------");
+        System.out.println("curLat = " + curLat);
+        System.out.println("curLon = " + curLon);
+        System.out.println("uuid = " + uuid);
+        System.out.println("pointIndex = " + pointIndex);
+        System.out.println("curDir = " + curDir);
+
+        return pedestrianService.directionCheck(curLat, curLon, uuid, pointIndex,curDir);
+    }
+
+
     @GetMapping("/cancel-navi")
-    public void cancelNavi(){
+    public String cancelNavi(@RequestParam("uuid") String uuid){
+        pedestrianService.cancelNavi(uuid);
 
-
+        return uuid + " 관련 모든 경로 삭제 완료";
     }
 
 

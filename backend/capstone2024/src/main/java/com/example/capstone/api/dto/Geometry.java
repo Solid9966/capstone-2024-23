@@ -11,6 +11,7 @@ import java.util.List;
 public class Geometry {
     @JsonProperty("type")
     private String type;
+
     @JsonProperty("coordinates")
     private Object coordinates;
 

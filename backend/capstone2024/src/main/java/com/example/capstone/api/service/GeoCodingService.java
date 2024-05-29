@@ -30,10 +30,8 @@ public class GeoCodingService {
         HttpEntity<Object> httpEntity = new HttpEntity<>(headers);
 
         //api 호출
-        //추후에 바디 변경 필요
-        var body1 = restTemplate.exchange(uri, HttpMethod.GET, httpEntity, Object.class).getBody();
-        TmapGeoCodingResponseDto body2 = restTemplate.exchange(uri, HttpMethod.GET, httpEntity, TmapGeoCodingResponseDto.class).getBody();
-        return body2;
+        TmapGeoCodingResponseDto body = restTemplate.exchange(uri, HttpMethod.GET, httpEntity, TmapGeoCodingResponseDto.class).getBody();
+        return body;
 
     }
 }

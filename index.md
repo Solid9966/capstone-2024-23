@@ -1,43 +1,75 @@
-## [EYE-U](https://kookmin-sw.github.io/capstone-2024-23) 객체탐지를 활용한 시각장애인용 보행 보조 앱 <br>
-**[중간 보고서](https://drive.google.com/file/d/1qCj5WcPVCpLKO3xc9QuAqeMOCx_elHUC/view?usp=drive_link)** <br>
-**[중간발표 PPT](https://docs.google.com/presentation/d/1-DtbgnbBgO2ALt-VH1T_9J1p4hcaCV0F/edit?usp=drive_link&ouid=116710458189142292821&rtpof=true&sd=true)**<br/>
-**[팀페이지 주소](https://github.com/kookmin-sw/capstone-2024-23)** <br>
+### [EYE-U](https://kookmin-sw.github.io/capstone-2024-23) 객체탐지를 활용한 시각장애인용 보행 보조 앱 <br>
+
 <br/>
 
-## 프로젝트 소개
-EYE-U는 보다 안전하고 편리한 내비게이션 솔루션을 제공하여 시각 장애인의 이동성을 향상시키는 것을 목표로 합니다.
-기존의 시각 장애인을 위한 길 안내 방법은 주로 점자판이나 안내견과 같은 수단을 사용해왔지만, 이러한 방법들은 제약이 많고 불편한 점들이 있습니다.
-이러한 문제를 극복하기 위해 시각 장애를 가진 분들을 위한 네비게이션 앱을 개발하게 되었습니다.
+## 📌 프로젝트 개요 | Project Abstract
+**“혹시 흰 지팡이나 안내견에 의지하여 길을 걷는 시각장애인을 본 적 있나요?"** <br><br>
+기존의 시각장애인을 위한 길 안내는 주로 점자판이나 안내견과 같은 수단을 사용해왔습니다. <br>
+하지만 이러한 방법들은 여러 제약과 불편한 점이 있습니다. <br>
+이 문제를 극복하기 위해 저희 EYE-U는 시각 장애가 있는 분들을 위한 내비게이션 앱을 개발하고자 합니다. <br><br>
+본 프로젝트는 시각장애인 또는 저시력자분들을 주요 대상으로 하여, 그들이 일상 생활에서 겪는 보행의 불편함과 위험을 줄여주는 보행 보조 앱입니다.<br>
+저희 앱은 실시간 음성 길 안내, 장애물 탐지, 위험물 알림 기능을 통해 이용자가 보다 안전하고 편리한 서비스를 경험할 수 있도록 도와줍니다.  <br>
+
 <br/>
 
-## Abstract
-EYE-U aims to enhance the mobility of visually impaired individuals by providing a safer and more convenient navigation solution. <br>
-Traditional methods of guiding visually impaired individuals, such as braille maps or guide dogs, often come with limitations and inconveniences.<br>
-To overcome these challenges, we have developed a navigation app specifically designed for individuals with visual impairments.<br>
-<br/>
+**“Have you ever seen a visually impaired person walking down the street relying on a white cane or guide dog?"** 
+<br><br>
+Existing route guidance for the visually impaired has mainly used means such as Braille boards or guide dogs. However, these methods have several limitations and inconveniences. To overcome this problem, we at EYE-U want to develop a navigation app for people with visual impairments.
 
-## 소개 영상
-[![소개영상](https://github.com/kookmin-sw/capstone-2024-23/assets/143046108/fbbb76cf-4f32-4450-8ba2-bba2e690552a)](https://www.youtube.com/watch?v=sgO9tWCrPbo)
+This project is a walking assistance app targeting people who are visually impaired or have low vision and reduces the discomfort and risk of walking they experience in their daily lives. Our app helps users experience a safer and more convenient service through real-time voice directions, obstacle detection, and dangerous goods notification functions.
+<br/><br/><br/>
+
+## 📃 포스터 | Poster 
+<img width="637" alt="image" src="https://github.com/kookmin-sw/capstone-2024-23/assets/143046108/39ed36ba-197c-436e-a67b-bf4bc6866031">
+
+<br/><br/>
+
+
+## 📘 주요 기능 | Key Features
+- 탐지 모드
+  - 장애물 및 위험물 탐지, 진동 경고
+- 보행 모드
+  - 실시간 내비게이션 길 음성 안내 + 위험물 탐지
+ <br/> <br/>
+  
+## 💡 EYE-U POINT
+- UI/UX
+   - 타겟 맞춤형 UI/UX
+     
+- 보행자 친화 길안내
+   - 목적지 출입구 및 보행로를 우선
+     
+- voice-all-in-one
+   - 불필요한 서비스 과정 제거
+   - VOICE만을 이용해서 모든 기능 이용 가능
+          
+- 위험 물체 감지
+   - 실시간 위험물 감지 및 진동 경고
 <br>
 
 
-### EYE-U POINT
-- 접근성 및 편의성
-   - 직관적인 기능을 통한 편안한 서비스 제공
-- 위험 물체 탐지
-   - 주변 환경을 안전하게 인지할 수 있도록 지원
-
-### 주요 기능 
-- 객체 인식 기능
-  - 객체를 인식하여 사용자에게 방해물을 경고 및 안내
-- 내비게이션 길 안내 기능
-  - 도착지까지의 경로를 음성으로 안내
-
 <br/>
 
-## 서비스 구조
-<img width="807" alt="image" src="https://github.com/kookmin-sw/capstone-2024-23/assets/143046108/d903715b-b1cf-4354-9ff2-f6341856339c">
+## 📁 서비스 프로세스 | Sevice Process 
+<img width="700" alt="image" src="https://github.com/kookmin-sw/capstone-2024-23/assets/143046108/1040888e-5833-4ccf-858c-129147d04752">
+<br/>
+<br/>
 
+## 🎞 소개 영상 | Introduction video
+[![소개영상](https://github.com/kookmin-sw/capstone-2024-23/assets/143046108/fbbb76cf-4f32-4450-8ba2-bba2e690552a)](https://www.youtube.com/watch?v=sgO9tWCrPbo)
+ <br>
+<br>
+## 🎞 시연 영상 | Demonstration video
+[![시연영상](https://github.com/kookmin-sw/capstone-2024-23/assets/143046108/23c35d4a-64ef-480c-b2cc-998f91cf2b7a)](https://www.youtube.com/watch?v=FsVF8S9SSMI)
+ <br>
+<br/>
+<br>
+
+## 📃 매뉴얼 | Manual
+<a href="https://drive.google.com/file/d/1CKPsragzixRz9LznDcxsWLsOERELbrju/view?usp=drive_link">
+  <img src="https://github.com/kookmin-sw/capstone-2024-23/assets/143046108/5921c473-6732-494b-a0b0-833e70514887" alt="매뉴얼" width="400"/>
+</a>
+<br/><br/>
 
 ## 팀 소개
 #### 김호준
@@ -85,8 +117,47 @@ role : Back-end, AWS 서버 관리
 E-mail: picetea44@kookmin.ac.kr
 ~~~
 
+<br/>
 
-## Setting
+## ⤴ 배포 | Distribution
+<details>
+<summary>배포</summary>
+<div markdown="1"> 
+   
+~~~
+- 어플리케이션 APK 
+1. Android Studio - build
+
+2. 해당 위치에 설치된 APK 파일을 배포한다.
+capstone-2024-23\frontend\practice\build\app\outputs\flutter-apk 
+~~~
+
+</div>
+</details>
+<br>
+
+## 🔎 실행 방법 | Execution method
+
+<details>
+<summary>실행 방법</summary>
+<div markdown="1">   
+   
+~~~
+1. git clone <br>
+$ git clone https://github.com/kookmin-sw/capstone-2024-23.git
+
+2. Android Studio - build
+
+3. 해당 위치에 설치된 APK 파일 실행한다.
+capstone-2024-23\frontend\practice\build\app\outputs\flutter-apk 
+~~~
+
+</div>
+</details>
+
+<br>
+
+## ⚙ 환경 설정 | Configuration Settings
 
 <details>
 <summary>서버 실행 환경 설정</summary>
@@ -219,9 +290,17 @@ java -Dspring.config.location=classpath:/application.properties -jar yourapp.jar
 <div markdown="1">       
 
 1. 안드로이드스튜디오 Download (sdk 29 이상)
-2. 플러터 3.19 버전 Download 
-3. pubspec.yaml 파일 -> seppech_to_text : Pub.get Download
-<br>
+2. 플러터 3.19 버전 Download
+3. git clone 
+$ git clone https://github.com/kookmin-sw/capstone-2024-23.git
+4.  frontend/pradtice/pubspec.yaml -> flutter_vision-master 경로 설정 (본인 경로)
+
+~~~
+   path: /Users/yoon/StudioProjects/capstone-2024-23/frontend/flutter_vision-master
+~~~
+
+5. pubspec.yaml -> Pub.get Download
+
 
 </div>
 </details>
@@ -236,4 +315,28 @@ java -Dspring.config.location=classpath:/application.properties -jar yourapp.jar
 
 </div>
 </details>
+<br><br>
 
+
+## 🗂 문서 | Document
+<div align="center">
+  <a href="https://kookmin-sw.github.io/capstone-2024-23/">
+    <img src="https://user-images.githubusercontent.com/54926467/229354423-0f9ee204-2541-4bb9-bbd2-bd308b0876d7.png" width="150" height="150"/>
+   </a>
+</div>  
+
+<div align="center">
+  <a href="https://drive.google.com/drive/folders/1vbsn7_iQJLKg0mndYibDV0XZ2FvSA50m?usp=sharing">
+    중간발표 자료
+  </a>
+  | 
+  <a href="https://drive.google.com/drive/folders/1e31Y14xjxMHKBm3kBdTwpcm1VmLhErAp?usp=sharing">
+    최종발표 자료
+  </a>
+  | 
+  <a href="https://drive.google.com/file/d/1CKPsragzixRz9LznDcxsWLsOERELbrju/view?usp=drive_link"> 사용자 매뉴얼
+  </a> 
+  | 
+  <a href="https://drive.google.com/file/d/1pSbIkfw7-YX9NZHFm7l9u1XaIsZ3M2fC/view?usp=drive_link"> 포스터
+  </a>
+<div/>

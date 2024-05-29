@@ -11,7 +11,7 @@ class TTS{
 
   void initialize() async {
     await tts.setLanguage('ko-KR');
-    await tts.setSpeechRate(0.3);
+    await tts.setSpeechRate(0.5);
   }
 
   void setMessage(String setMessage){

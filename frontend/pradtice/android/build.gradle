@@ -3,9 +3,9 @@ allprojects {
         google()
         mavenCentral()
         // Tmap의 repository 추가
-        maven {
-            url = "https://devrepo.tmapadmin.com/repository/tmap-sdk-release/"
-        }
+//        maven {
+//            url = "https://devrepo.tmapadmin.com/repository/tmap-sdk-release/"
+//        }
     }
 }
 
